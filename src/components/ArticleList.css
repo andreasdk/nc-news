@@ -16,6 +16,8 @@
 .btn-article {
   background-color: var(--primary-color);
   border-color: var(--primary-color-light);
+  font-size:2rem;
+  padding:1rem;
 }
 
 .btn-article:hover {
