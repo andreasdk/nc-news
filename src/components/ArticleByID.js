@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticleByID } from "../api";
 import "./Article.css"
+import Error from "./Error";
 
 export default function ArticleByID() {
 
     const [article, setArticle] = useState();
     const [isLoading, setIsLoading] = useState(true)
     const {article_id} = useParams();
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         setIsLoading(true);
@@ -15,11 +17,23 @@ export default function ArticleByID() {
             setArticle(data)
             setIsLoading(false)
         })
+        .catch(
+            ({
+              response: {
+                data: { msg },
+                status,
+              },
+            }) => {
+              setError({ msg, status });
+              setIsLoading(false);
+            }
+          );
         
     }, [article_id])
 
 
     if (isLoading) {return <p>.....loading</p>}
+    if (error) return <Error/>;
 
     return (
         <section className="u-padding-top-lg">
