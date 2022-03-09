@@ -1,38 +1,149 @@
-.App {
+/*CSS Variables*/
+
+:root {
+    --primary-color: #6DAFFE;
+    --primary-color-light: #EDF6FF;
+    --primary-color-dark: #437FC7;;
+    --secondary-color-light: #ffb900;
+    --secondary-color-dark:#ff0000;
+    --grey-color-light-1: #f7f7f7;
+    --grey-color-dark-1: #777;
+    --grey-color-dark-2: #999;
+    --grey-color-dark-3: #333;
+    --white-color: #fff;
+    --black-color: #0a0a0a;
+    --bg-color:#F6F6F2;
+    --primaryfont: 'Fredoka', sans-serif;
+    --secondaryfont: 'Lato', sans-serif;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--primaryfont);
+    background-color: #F6F6F2;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%; } 
+}
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%; } 
+}
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%; } 
+}
+.heading-primary {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+/**Used on homepage header**/
+.heading-primary-main {
+    color: var(--grey-color-light-1);
+    display: block;
+    font-size: 6rem;
+    font-weight: 500;
+    letter-spacing: 1.25rem;
+    margin-left:.25rem;
+}
+  /**Used on homepage header**/
+.heading-primary-sub {
+    color: var(--grey-color-light-1);
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 500;
+    letter-spacing: 1.45rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .heading-primary-main {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+}
+    
+@media only screen and (max-width: 37.5em) {
+    .heading-primary-sub {
+      letter-spacing: .5rem;
+    }
+}
+    
+.heading-secondary {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.heading-tertiary {
+  color: var(--primary-color-dark);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+    
+@media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem;
+      margin-top:3rem; 
+    } 
+}
+@media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; 
+    } 
+}
+
+.u-center-text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.u-margin-bottom-large {
+  margin-bottom: 8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-large {
+    margin-bottom: 5rem !important; } 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .u-margin-bottom-medium {
+    margin-bottom: 3rem !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.u-padding-bottom-small {
+  padding-bottom: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.u-padding-top {
+  padding-top: 2rem;
+}
+
+.u-padding-top-lg {
+  padding-top: 5rem;
 }

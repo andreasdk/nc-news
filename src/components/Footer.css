@@ -1,0 +1,8 @@
+.footer__icons {
+    color: var(--primary-color-light);
+    font-size: 3rem;
+}
+
+.footer__icons a {
+    color: var(--primary-color-light);
+}

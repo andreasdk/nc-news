@@ -1,0 +1,18 @@
+
+.navbar__transparent, .nav-link {
+    color:var(--white-color);
+}
+
+.navbar__transparent .nav-link:link,
+.navbar__transparent .navbar .nav-link:visited {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #f7f7f7 50%);
+  background-size: 230%;
+  color: var(--white-color);
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem 2.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .4s;
+}

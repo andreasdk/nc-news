@@ -1,0 +1,35 @@
+.grid {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+  
+.grid > div {
+  flex-basis: calc(50% - 40px);
+}
+  
+.box {
+  margin: 20px;
+}
+  
+.btn-article {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color-light);
+}
+
+.btn-article:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color-dark);
+}
+
+.card__icon {
+  font-size: 1.5rem;
+  color: var(--primary-color-dark);
+}
+
+.card__icon__text {
+  font-size: 1.75rem;
+
+  margin-left: .5rem;
+}
