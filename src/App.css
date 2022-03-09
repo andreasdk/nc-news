@@ -140,10 +140,18 @@ html {
   padding-bottom: 3rem;
 }
 
+.u-padding-bottom-large {
+  padding-bottom: 6rem;
+}
+
 .u-padding-top {
   padding-top: 2rem;
 }
 
 .u-padding-top-lg {
   padding-top: 5rem;
+}
+
+.u-padding-top-error {
+  padding-top: 12rem;
 }
