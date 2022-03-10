@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchArticleByID } from "../api";
 import "./Article.css"
 import Error from "./Error";
+import CommentList from "./CommentList";
 
 export default function ArticleByID() {
 
@@ -67,6 +68,7 @@ export default function ArticleByID() {
                 </ul>
             </div>
         </div>
+        <CommentList />
         </section>
         
      

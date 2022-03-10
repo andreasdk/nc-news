@@ -5,21 +5,17 @@
     font-family: inherit;
     font-weight: 100;
     margin: 48px auto;
-    width: 20rem;
+    width: 60rem;
 }
-@media only screen and (max-width: 56.25em)  {
-    .article__container {
-        width: 28rem;
-   }
-}
+
 @media only screen and (min-width: 75em) {
     .article__container {
-        width: 40rem;
+        width: 60rem;
    }
 }
 @media only screen and (min-width: 112.5em)  {
     .article__container {
-        width: 50rem;
+        width: 90rem;
    }
 }
 
