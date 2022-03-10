@@ -16,6 +16,13 @@ const fetchArticleByID = (id) => {
   });
 }
 
+const fetchArticlesByTopic = (topic_slug) => {
+  return newsAPI.get(`/articles?topic=${topic_slug}`).then((res) => {
+    console.log(res);
+    return res.data.articles;
+  });
+};
+
 const patchArticleVotes = (article_id, votes) => {
   return newsAPI
     .patch(`/articles/${article_id}`, { inc_votes: votes })
@@ -26,4 +33,4 @@ const patchArticleVotes = (article_id, votes) => {
 };
 
 
-export { fetchArticles, fetchArticleByID, patchArticleVotes };
+export { fetchArticles, fetchArticleByID, patchArticleVotes, fetchArticlesByTopic };

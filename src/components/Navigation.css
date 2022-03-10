@@ -16,3 +16,10 @@
   text-transform: uppercase;
   transition: all .4s;
 }
+.dropdown-menu {
+  min-width: 12rem;
+}
+
+.dropdown-item {
+  font-size: 2rem;
+}
