@@ -92,6 +92,19 @@ html {
     text-transform: uppercase;
 }
 
+.paragraph {
+  color: inherit;
+  font-size: 2rem;
+  font-family:var(--secondaryfont);
+  margin: 2rem 3rem 1rem;
+}
+
+.card-paragraph {
+  font-size: 1.6rem;
+  font-family:var(--primaryfont);
+  margin:0;
+}
+
 .heading-tertiary {
   color: var(--primary-color-dark);
   font-size: 2rem;
@@ -118,6 +131,11 @@ html {
 .u-margin-bottom-large {
   margin-bottom: 8rem;
 }
+
+.u-margin-right-small {
+  margin-right: 1rem;
+}
+
 @media only screen and (max-width: 56.25em) {
   .u-margin-bottom-large {
     margin-bottom: 5rem !important; } 
