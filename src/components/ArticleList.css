@@ -32,6 +32,21 @@
 
 .card__icon__text {
   font-size: 1.75rem;
-
   margin-left: .5rem;
+}
+
+.card__icon__button {
+  background-color: var(--primary-color-dark);
+  width: 6rem;
+  height:4rem;
+}
+
+.card__icon__button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+
+.article__card__icon {
+  color: var(--primary-color-light);
+  font-size: 2rem;
 }

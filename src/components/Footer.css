@@ -6,3 +6,7 @@
 .footer__icons a {
     color: var(--primary-color-light);
 }
+
+.card-footer {
+    background-color: inherit;
+}

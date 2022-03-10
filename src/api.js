@@ -16,5 +16,14 @@ const fetchArticleByID = (id) => {
   });
 }
 
+const patchArticleVotes = (article_id, votes) => {
+  return newsAPI
+    .patch(`/articles/${article_id}`, { inc_votes: votes })
+    .then(({data}) => {
+      return data;
+    })
+    .catch((err) => console.log(err));
+};
 
-export { fetchArticles, fetchArticleByID };
+
+export { fetchArticles, fetchArticleByID, patchArticleVotes };
