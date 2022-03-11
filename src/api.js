@@ -46,5 +46,4 @@ const fetchComments = (article_id) => {
   });
 };
 
-
 export { fetchArticles, fetchArticleByID, patchArticleVotes, fetchArticlesByTopic, fetchComments };

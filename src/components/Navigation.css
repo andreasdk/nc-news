@@ -23,3 +23,20 @@
 .dropdown-item {
   font-size: 2rem;
 }
+
+.navbar__transparent__button {
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: 2px solid var(--white-color);
+  color: inherit;
+  cursor:pointer;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.navbar__transparent__button:hover,
+.navbar__transparent__button:focus {
+  background-color: var(--white-color);
+  border:none;
+  color: var(--primary-color);
+}
