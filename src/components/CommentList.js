@@ -4,6 +4,7 @@ import CommentCard from "./CommentCard";
 import "./ArticleList.css"
 import Error from "./Error";
 import { useParams } from "react-router-dom";
+import UserComment from "./UserComment";
 
 export default function ArticleList() {
   const [comments, setComments] = useState([]);
@@ -39,7 +40,9 @@ export default function ArticleList() {
   return (
     <div>
        <h2 className="heading-secondary u-center-text u-margin-bottom-small">Comments</h2>
+       <UserComment/>
        <section className="grid">
+         
       {comments.map(
         ({
             author,

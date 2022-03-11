@@ -24,7 +24,6 @@ const fetchArticlesByTopic = (topic_slug) => {
   return newsAPI
   .get(`/articles?topic=${topic_slug}`)
   .then((res) => {
-    console.log(res);
     return res.data.articles;
   });
 };
@@ -46,4 +45,13 @@ const fetchComments = (article_id) => {
   });
 };
 
-export { fetchArticles, fetchArticleByID, patchArticleVotes, fetchArticlesByTopic, fetchComments };
+const postComment = (article_id, username, body) => {
+  return newsAPI
+  .post(`articles/${article_id}/comments`, {
+    username: username,
+    body: body,
+  })
+  .then((res) => { return res.data.comment });
+};
+
+export { fetchArticles, fetchArticleByID, patchArticleVotes, fetchArticlesByTopic, fetchComments, postComment };

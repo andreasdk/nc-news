@@ -1,4 +1,4 @@
-import {Card, } from "react-bootstrap";
+import {Card} from "react-bootstrap";
 
 export default function CommentCard({ author, body, created_at, votes }) {
     return (

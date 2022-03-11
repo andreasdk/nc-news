@@ -6,7 +6,7 @@ import { UserContext } from "../context/UserContext";
 import { login } from "../utils/login";
 
 export default function Navigation() {
-  const { user, setUser } = useContext(UserContext);
+  const { loggedInUser, setLoggedInUser } = useContext(UserContext);
   return (
     <Navbar bg="dark" fixed="top" className="navbar__transparent">
       <LinkContainer to="/">
@@ -20,11 +20,11 @@ export default function Navigation() {
         
         <Form className="d-flex">
         
-        {user ? (
+        {loggedInUser ? (
           
         <Button className="navbar__transparent__button"
           onClick={() => {
-            setUser(null);
+            setLoggedInUser(null);
           }}
         >
           Logout
@@ -35,7 +35,8 @@ export default function Navigation() {
         <Button className="navbar__transparent__button"
           onClick={async () => {
             const user = await login();
-            setUser(user);
+            setLoggedInUser(user);
+            console.log(user);
           }}
         >
           Login

@@ -18,7 +18,7 @@ export default function ArticleCard({ author, topic, title, created_at, article_
             <Card.Text>
               <FontAwesomeIcon className="card__icon" icon={faMessage} /> <span className="card__icon__text">{comment_count}</span>
             </Card.Text>
-            <Link to={`/articles/${article_id}`}><Button variant="primary" className="btn-article u-margin-bottom-small">Read article</Button></Link>
+            <Link to={`/article/${article_id}`}><Button variant="primary" className="btn-article u-margin-bottom-small">Read article</Button></Link>
             <ArticleVotes votes={votes} article_id={article_id} />
           </Card.Body>
         </Card>

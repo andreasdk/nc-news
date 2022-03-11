@@ -111,6 +111,17 @@ html {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.comment__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment__form__input {
+  width:50rem;
+
+}
     
 @media only screen and (max-width: 56.25em) {
     .heading-secondary {

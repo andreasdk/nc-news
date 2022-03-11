@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import ArticleList from "./components/ArticleList";
 import ArticleByID from "./components/ArticleByID";
 import ArticleTopicList from "./components/ArticleTopicList";
@@ -9,19 +9,17 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 
-
 function App() {
-  const [user, setUser] = useState(null);
-  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
-  console.log(value)
+  const [loggedInUser, setLoggedInUser] = useState(null);
+
   return (
       <BrowserRouter>
         <div className="App">
-        <UserContext.Provider value={value}>
+        <UserContext.Provider value={{loggedInUser: loggedInUser, setLoggedInUser: setLoggedInUser}}>
         <Navigation />
           <Routes>
               <Route path="/" element={<ArticleList />} />
-              <Route path="/articles/:article_id" element={<ArticleByID />} />
+              <Route path="/article/:article_id" element={<ArticleByID />} />
               <Route path="/articles/topic/:topic_slug" element={<ArticleTopicList />} />
           </Routes>
           <Footer />
